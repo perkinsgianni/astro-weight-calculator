@@ -3,10 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>Astro Weight Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
   </head>
   <body>
-     <!-- Write your markup here  -->
+    <header>
+      <img id="banner-img" src="assets/solar system.jpeg" alt="Photo of Solar System (including Pluto)"/>
+      <h1>Astro Weight Calculator</h1>
+    </header>
 
-    <script src="main.js" charset="utf-8"></script>
-  </body>
+    <main>
+      <div id="weight-input" class="input">
+        <h3>Enter your weight:</h3>
+        <input id="user-weight" type="text" placeholder="Weight (lbs)"/>
+      </div>
+
+      <div id="planet-input" class="input">
+        <h3>Select a planet:</h3>
+        <select id="planets"></select>
+      </div>
+
+      <div class="output">
+        <p id="output"></p>
+      </div>
+
+      <div>
+        <button id="calculate-button" style="cursor:pointer">Calculate</button>
+      </div>
+
+      <script src="main.js" charset="utf-8"></script>
+    </main>
 </html>

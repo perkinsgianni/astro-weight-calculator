@@ -1,0 +1,64 @@
+:root {
+    --background-color: black;
+    --input-width: 45%;
+    --font-color: white;
+    --font-size: 16px;
+}
+
+body {
+    font-family: Montserrat;
+}
+
+#banner-img {
+    display: block;
+    margin: auto;
+}
+
+header, main {
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+.input {
+    display: inline-block;
+    width: 30%;
+}
+
+[type=text] {
+    border: 1px solid var(--background-color);
+    border-radius: 5px;
+    height: 35px;
+    width: var(--input-width);
+    text-align: center;
+    font-size: var(--font-size);
+}
+
+select {
+    height: 40px;
+    width: var(--input-width);
+    background-color: white;
+    font-size: var(--font-size);
+}
+
+.output {
+    display: inline-block;
+    width: 100%;
+    color: darkblue;
+    font-size: 25px;
+}
+
+button {
+    border-radius: 10px;
+    height: 50px;
+    width: 120px;
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-size: 18px;
+}
