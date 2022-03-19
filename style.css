@@ -45,6 +45,7 @@ select {
     width: var(--input-width);
     background-color: white;
     font-size: var(--font-size);
+    text-indent: 35%;
 }
 
 .output {
