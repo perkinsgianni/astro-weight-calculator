@@ -18,9 +18,6 @@ var planets = [
 // target select element that contains "planets" id
 let dropDown = document.getElementById("planets");
 
- // for each element in planets array, assign option value to planet name
-// planets.reverse();
-
 // reverse drop-down order so that the sun is first; then, for each element in planets array, assign option value to planet name
 planets.reverse().forEach((option) => {
     [planetName] = option;
