@@ -49,6 +49,10 @@ select {
     text-indent: 5%;
 }
 
+#pluto-check {
+    margin: 1% 0% 0% 38%;
+}
+
 .output {
     display: inline-block;
     width: 100%;

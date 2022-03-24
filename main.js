@@ -50,9 +50,32 @@ function calculateWeight(weight, planetName) {
     }
 };
 
+// create a function that removes Pluto as an option when checkbox is checked
+
+function removePluto() {
+    // target pluto checkbox, whose default is unchecked
+    let plutoCheckbox = document.getElementById("pluto-checkbox");
+
+    // if plutoCheckbox is checked
+    if ( plutoCheckbox.checked != false ) {
+        // remove pluto from drop-down list
+        dropDown.removeChild(dropDown.options[10])
+    // if plutoCheckbox is unchecked
+    } else if ( plutoCheckbox.checked == false ) {
+        // add pluto back to drop-down list
+        let plutoOption = document.createElement("option");
+        // set planet name as option's text
+        plutoOption.text = planetName;
+        // set planet name as option's value
+        plutoOption.value = planetName;
+        // add option to drop-down list
+        dropDown.appendChild(plutoOption);
+        }
+}
+
 // create a function that responds when user clicks on button
 
-function handleClickEvent() {
+function calculateButton() {
     //  create variable called userWeight and assign value of user's weight
     let userWeight = document.getElementById("user-weight").value;
 
@@ -66,5 +89,8 @@ function handleClickEvent() {
     document.getElementById("output").innerHTML = `If you were on ${planetName}, you would weigh ${result}lbs!`;
 };
 
-// set #calculate-button element's onclick method to use the handleClickEvent function
-document.getElementById("calculate-button").addEventListener("click", handleClickEvent);
+// set #calculate-button element's onclick method to use the calculateButton function
+document.getElementById("calculate-button").addEventListener("click", calculateButton);
+
+// set #pluto-checkbox element's onclick method to use the removePluto function
+document.getElementById("pluto-checkbox").addEventListener("click", removePluto);
