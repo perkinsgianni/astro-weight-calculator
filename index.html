@@ -15,31 +15,42 @@
 
     <main>
       <div id="weight-input" class="input">
-        <h3>Enter your weight:</h3>
+        <h3 id="weight-text">Enter your weight:</h3>
         <input id="user-weight" type="text" placeholder="Weight (lbs)"/>
       </div>
 
       <div id="planet-input" class="input">
-        <h3>Select a planet:</h3>
+        <h3 id="select-text">Select a planet:</h3>
         <select id="planets"></select>
-      </div>
-
-      <div id="pluto-check">
         <label id="pluto-input">Pluto
           <input id="pluto-checkbox" type="checkbox">
           <span id="pluto-checkmark"></span>
         </label>
       </div>
 
+      <!-- <div id="customize-planets">
+        <div class="input">
+          <h3 id="multiplier-text">Add a multiplier:</h3>
+          <input id="new-planet-multiplier" type="text"/>
+        </div>
+
+        <div class="input">
+          <h3>Add a planet:</h3>
+          <input id="new-planet-name" type="text"/>
+          <button id="add-planet-button" style="cursor:pointer">Submit</button>
+        </div>
+      </div> -->
+
       <div class="output">
         <p id="output"></p>
       </div>
 
-      <div>
+      <div class="button">
         <button id="calculate-button" style="cursor:pointer">Calculate</button>
+        <button id="reset-button" style="cursor:pointer">Reset</button>
       </div>
     </main>
-    
+
     <footer>
       <script src="main.js" charset="utf-8"></script>
     </footer>

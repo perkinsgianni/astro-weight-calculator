@@ -31,6 +31,10 @@ h3 {
     width: 30%;
 }
 
+#weight-text {
+    margin-right: -6%;
+}
+
 [type=text] {
     border: 1px solid var(--background-color);
     border-radius: 5px;
@@ -41,6 +45,7 @@ h3 {
 }
 
 select {
+    margin-left: -16%;
     border-radius: 5px;
     height: 40px;
     width: var(--input-width);
@@ -49,8 +54,23 @@ select {
     text-indent: 5%;
 }
 
-#pluto-check {
-    margin: 1% 0% 0% 38%;
+#customize-planets {
+    margin-left: 4%;
+    width: 90%;
+}
+
+#multiplier-text {
+    margin-left: 10%;
+}
+
+#new-planet-multiplier, #new-planet-name {
+    width: 40%
+}
+
+#add-planet-button {
+    height: 18px;
+    width: 14.5%;
+    font-size: 9px;
 }
 
 .output {
@@ -67,4 +87,8 @@ button {
     background-color: var(--background-color);
     color: var(--font-color);
     font-size: 18px;
+}
+
+button:last-child {
+    width: 95px;
 }
