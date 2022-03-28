@@ -1,6 +1,5 @@
 :root {
     --background-color: black;
-    --input-width: 45%;
     --font-color: white;
     --font-size: 16px;
 }
@@ -39,7 +38,7 @@ h3 {
     border: 1px solid var(--background-color);
     border-radius: 5px;
     height: 35px;
-    width: var(--input-width);
+    width: 36%;
     font-size: var(--font-size);
     text-indent: 5%;
 }
@@ -48,13 +47,13 @@ select {
     margin-left: -16%;
     border-radius: 5px;
     height: 40px;
-    width: var(--input-width);
+    width: 36%;
     background-color: var(--font-color);
     font-size: var(--font-size);
     text-indent: 5%;
 }
 
-#customize-planets {
+/* #customize-planets {
     margin-left: 4%;
     width: 90%;
 }
@@ -71,7 +70,7 @@ select {
     height: 18px;
     width: 14.5%;
     font-size: 9px;
-}
+} */
 
 .output {
     display: inline-block;
