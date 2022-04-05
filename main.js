@@ -72,13 +72,13 @@ function calculateWeight(weight, planetName) {
 
 // create a function that calculates the weight of instruments on new planet with its own multiplier
 
-// function calculateNewWeight(weight, multiplier) {
-//     // if multiplier for new planet is greater than or equal to 0
-//     if ( multiplier >= 0 ) {
-//         // calculate product of new planet's multiplier and weight
-//         return weight * multiplier;
-//     }
-// };
+function calculateNewWeight(weight, multiplier) {
+    // if multiplier for new planet is greater than or equal to 0
+    if ( multiplier >= 0 ) {
+        // calculate product of new planet's multiplier and weight
+        return weight * multiplier;
+    }
+};
 
 // create a function that responds when user clicks on calculate button
 
@@ -86,44 +86,44 @@ function calculateButton() {
     //  create variable called userWeight and assign value of user-weight
     let userWeight = document.getElementById("user-weight").value;
     //  create variable called multiplier and assign value of new-planet-multiplier
-    // let multiplier = document.getElementById("new-planet-multiplier").value;
+    let multiplier = document.getElementById("new-planet-multiplier").value;
     // create variable called planetName and assign name of selected planet from drop-down list
     let planetName = dropDown.value;
     // create variable called newPlanetName and assign name of new planet from drop-down list
-    // let newPlanetName = dropDown.value;
+    let newPlanetName = dropDown.value;
     // create variable called result and assign value of calculated weight
     let result = calculateWeight(userWeight, planetName);
     // create variable called newResult and assign value of calculated weight on new planet
-    // let newResult = calculateNewWeight(userWeight, multiplier);
+    let newResult = calculateNewWeight(userWeight, multiplier);
 
     // write code to display the message
-    document.getElementById("output").innerHTML = `If you were on ${planetName}, you would weigh ${result}lbs!`;
+    // document.getElementById("output").innerHTML = `If you were on ${planetName}, you would weigh ${result}lbs!`;
 
     // write code to display message, based on whether multiplier is less than or equal to 0
-    // if ( multiplier <= 0) {
-    //     document.getElementById("output").innerHTML = `If you were on ${planetName}, you would weigh ${result}lbs!`;
-    // } else {
-    //     document.getElementById("output").innerHTML = `If you were on ${newPlanetName}, you would weigh ${newResult}lbs!`;
-    // }
+    if ( multiplier <= 0) {
+        document.getElementById("output").innerHTML = `If you were on ${planetName}, you would weigh ${result}lbs!`;
+    } else {
+        document.getElementById("output").innerHTML = `If you were on ${newPlanetName}, you would weigh ${newResult}lbs!`;
+    }
 };
 
 // create a function that adds custom planet to drop-down list when user clicks on add planet button
 
-// function addPlanetButton() {
-//     // target input element with new-planet-name id
-//     let newPlanetName = document.getElementById("new-planet-name").value;
+function submitButton() {
+    // target input element with new-planet-name id
+    let newPlanetName = document.getElementById("new-planet-name").value;
 
-//     // if newPlanetName isn't "true"
-//     if ( newPlanetName != true ) {
-//         // add new planet to drop-down list
-//         let newPlanetOption = document.createElement("option");
-//         newPlanetOption.text = newPlanetName;
-//         newPlanetOption.value = newPlanetName;
-//         dropDown.appendChild(newPlanetOption);
-//     }
-//     // set new planet as default value in drop-down list
-//     dropDown.selectedIndex = 11;
-// };
+    // if newPlanetName isn't "true"
+    if ( newPlanetName != true ) {
+        // add new planet to drop-down list
+        let newPlanetOption = document.createElement("option");
+        newPlanetOption.text = newPlanetName;
+        newPlanetOption.value = newPlanetName;
+        dropDown.appendChild(newPlanetOption);
+    }
+    // set new planet as default value in drop-down list
+    dropDown.selectedIndex = dropDown.length - 1;
+};
 
 // create a function that clears output when user clicks on reset button
 
@@ -131,16 +131,16 @@ function resetButton() {
     // clear user-weight value
     document.getElementById("user-weight").value = '';
     // clear new-planet-name value
-    // document.getElementById("new-planet-name").value = '';
+    document.getElementById("new-planet-name").value = '';
     // clear new-planet-multiplier
-    // document.getElementById("new-planet-multiplier").value= '';
+    document.getElementById("new-planet-multiplier").value= '';
     // set first index as drop-down option
     dropDown.selectedIndex = 0;
     // add pluto back to drop-down list
-    let plutoOption = document.createElement("option");
-    plutoOption.text = planetName;
-    plutoOption.value = planetName;
-    dropDown.appendChild(plutoOption);
+    // let plutoOption = document.createElement("option");
+    // plutoOption.text = planetName;
+    // plutoOption.value = planetName;
+    // dropDown.appendChild(plutoOption);
     // clear pluto checkmark
     document.getElementById("pluto-checkbox").checked = false;
     // assign empty string to message
@@ -154,6 +154,6 @@ document.getElementById("calculate-button").addEventListener("click", calculateB
 // set #pluto-checkbox element's onclick method to use the removePluto function
 document.getElementById("pluto-checkbox").addEventListener("click", removePluto);
 // set #calculate-button element's onclick method to use the addPlanetButton function
-// document.getElementById("add-planet-button").addEventListener("click", addPlanetButton);
+document.getElementById("submit-button").addEventListener("click", submitButton);
 // set #reset-button element's onclick method to use resetButton function
 document.getElementById("reset-button").addEventListener("click", resetButton);

@@ -53,7 +53,7 @@ select {
     text-indent: 5%;
 }
 
-/* #customize-planets {
+#customize-planets {
     margin-left: 4%;
     width: 90%;
 }
@@ -66,11 +66,11 @@ select {
     width: 40%
 }
 
-#add-planet-button {
+#submit-button {
     height: 18px;
-    width: 14.5%;
-    font-size: 9px;
-} */
+    width: 40px;
+    font-size: 8px;
+}
 
 .output {
     display: inline-block;
